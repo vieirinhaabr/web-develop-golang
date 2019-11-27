@@ -1,45 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-type Person struct {
-	Fname string
-	Lname string
-}
+func main() {
+	// slice
+	// composite literal; slice literal
+	x := []int{7, 9, 42}
+	fmt.Println(x)
 
-type SecretAgent struct {
-	Person
-	Licensetokill bool
-}
+	y := make([]int, 0, 100)
+	y = append(y, 8)
+	y = append(y, 12)
+	y = append(y, 43)
+	fmt.Println(y)
 
-func (p Person) speak(){
-	fmt.Println(p.Fname, p.Lname, `says, "Good morning, James."`)
-}
-
-func main(){
-	xi := []int{11, 22, 33, 42}
-	fmt.Println(xi[0])
-
-	m := map[string]int{
-		"Tom": 40,
-		"Kate": 25,
-	}
-	fmt.Println(m["Tom"])
-
-	p1 := Person {
-		"Money",
-		"Batch",
-	}
-	fmt.Println(p1)
-
-	p1.speak()
-
-	James := SecretAgent{
-		Person{
-			"James",
-			"Bond",
-		},
-		true,
-	}
-	fmt.Println(James)
+	// map
+	// struct
 }
